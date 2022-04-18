@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:ctx="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:service="http://hccp.noc.org/schema/service/service"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+    http://hccp.noc.org/schema/service/service http://hccp.noc.org/schema/service/service.xsd">
+
+    <service:application id="APP-GBM" name="四川省自贡银行政府债券项目库及全生命周期管理系统"/>
+
+    <!--    <ctx:component-scan base-package="com.dlyd.application.gbm.service"/>-->
+    <bean id="container.properties.configurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <value>classpath:hccp-platform-service-container.properties</value>
+        </property>
+        <property name="placeholderPrefix" value="$SVC{"/>
+    </bean>
+
+    <tx:annotation-driven proxy-target-class="true" transaction-manager="service.gbm.transactionManager"/>
+    <ctx:annotation-config/>
+    <bean id="service.gbm.config.pathConfig"
+          class="com.dlyd.application.gbm.service.common.PathConfig">
+    </bean>
+
+
+    <bean id="service.sms.config"
+          class="com.dlyd.application.sms.SmsConfig">
+    </bean>
+
+    <!-- 数据源定义 -->
+    <!-- 根据prefix属性，会自动注册以下Spring JDBC相关的bean
+      <prefix>.dataSource
+      <prefix>.jdbcTemplate
+      <prefix>.transactionManager
+      <prefix>.transactionTemplate
+    -->
+    <service:data-source prefix="service.gbm"
+                         configurationCode="service.gbm.dataSource"
+                         configurationPath="/平台/服务/政府债券/数据源"
+                         timeBetweenEvictionRunsMillis="60000"
+                         minEvictableIdleTimeMillis="300000"
+                         maxOpenPreparedStatements="20"
+    />
+
+    <ctx:annotation-config/>
+
+
+    <bean id="reportingAccountDAO" class="com.dlyd.application.gbm.service.dao.cs.ReportingAccountDAOImpl">
+        <constructor-arg name="jdbcTemplate" ref="service.gbm.jdbcTemplate"/>
+    </bean>
+
+    <bean id="reportingBatchDAO" class="com.dlyd.application.gbm.service.dao.cs.ReportingBatchDAOImpl">
+        <constructor-arg name="jdbcTemplate" ref="service.gbm.jdbcTemplate"/>
+    </bean>
+
+    <bean id="reportingDetailDAO" class="com.dlyd.application.gbm.service.dao.cs.ReportingDetailDAOImpl">
+        <constructor-arg name="jdbcTemplate" ref="service.gbm.jdbcTemplate"/>
+    </bean>
+    <bean id="reportingStatusDAO" class="com.dlyd.application.gbm.service.dao.cs.ReportingStatusDAOImpl">
+        <constructor-arg name="jdbcTemplate" ref="service.gbm.jdbcTemplate"/>
+    </bean>
+
+    <bean id="sysXtcsDAO" class="com.dlyd.application.gbm.service.dao.cs.SysXtcsDAOImpl">
+        <constructor-arg name="jdbcTemplate" ref="service.gbm.jdbcTemplate"/>
+    </bean>
+
+    <bean id="sysTranCodeDAO" class="com.dlyd.application.gbm.service.dao.cs.SysTranCodeDAOImpl">
+        <constructor-arg name="jdbcTemplate" ref="service.gbm.jdbcTemplate"/>
+    </bean>
+</beans>

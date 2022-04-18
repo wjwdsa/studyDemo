@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <sys-header>
+    <data name="SYS_HEAD">
+      <struct>
+        <data name="MODULE_ID">
+          <field length="2" scale="0" type="string">FM</field>
+        </data>
+        <data name="TRAN_TIMESTAMP">
+          <field length="9" scale="0" type="string">135549278</field>
+        </data>
+        <data name="SOURCE_BRANCH_NO">
+          <field length="26" scale="0" type="string">COUNTER.507B9DB2CE0C.zpk32</field>
+        </data>
+        <data name="BRANCH_ID">
+          <field length="6" scale="0" type="string">013301</field>
+        </data>
+        <data name="USER_LANG">
+          <field length="7" scale="0" type="string">CHINESE</field>
+        </data>
+        <data name="SEQ_NO">
+          <field length="25" scale="0" type="string">TLE16063001C016104255</field>
+        </data>
+        <data name="SOURCE_TYPE">
+          <field length="2" scale="0" type="string">MT</field>
+        </data>
+        <data name="CORE_SEQ_NO">
+          <field length="21" scale="0" type="string">TLE16063001C016104255</field>
+        </data>
+        <data name="TRAN_CODE">
+          <field length="0" scale="0" type="string"/>
+        </data>
+        <data name="SERVER_ID">
+          <field length="9" scale="0" type="string">127.0.0.1</field>
+        </data>
+        <data name="MESSAGE_CODE">
+          <field length="4" scale="0" type="string">9960</field>
+        </data>
+        <data name="AUTH_PASSWORD">
+          <field length="0" scale="0" type="string"/>
+        </data>
+        <data name="SERVICE_CODE">
+          <field length="11" scale="0" type="string">SVR_INQUIRY</field>
+        </data>
+        <data name="TELLER_SEQ_NO">
+          <field length="25" scale="0" type="string">507B9DB2CE0C6815135549278</field>
+        </data>
+        <data name="APPR_FLAG">
+          <field length="0" scale="0" type="string"/>
+        </data>
+        <data name="USER_ID">
+          <field length="7" scale="0" type="string">01C0161</field>
+        </data>
+        <data name="PROGRAM_ID">
+          <field length="6" scale="0" type="string">014007</field>
+        </data>
+        <data name="AUTH_FLAG">
+          <field length="1" scale="0" type="string">N</field>
+        </data>
+        <data name="TRAN_TYPE">
+          <field length="0" scale="0" type="string"/>
+        </data>
+        <data name="APPR_USER_ID">
+          <field length="0" scale="0" type="string"/>
+        </data>
+        <data name="DEST_BRANCH_NO">
+          <field length="0" scale="0" type="string"/>
+        </data>
+        <data name="AUTH_USER_ID">
+          <field length="0" scale="0" type="string"/>
+        </data>
+        <data name="TRAN_DATE">
+          <field length="8" scale="0" type="string">20160630</field>
+        </data>
+        <data name="TRAN_MODE">
+          <field length="6" scale="0" type="string">ONLINE</field>
+        </data>
+        <data name="MESSAGE_TYPE">
+          <field length="4" scale="0" type="string">1400</field>
+        </data>
+        <data name="WS_ID">
+          <field length="2" scale="0" type="string">05</field>
+        </data>
+        <data name="REVERSAL_TRAN_TYPE">
+          <field length="0" scale="0" type="string"/>
+        </data>
+      </struct>
+    </data>
+  </sys-header>
+  <app-header>
+    <data name="APP_HEAD">
+      <struct>
+        <data name="PAGE_END">
+          <field length="1" scale="0" type="string">0</field>
+        </data>
+        <data name="CURRENT_NUM">
+          <field length="1" scale="0" type="string">0</field>
+        </data>
+        <data name="PGUP_OR_PGDN">
+          <field length="1" scale="0" type="string">0</field>
+        </data>
+        <data name="PAGE_START">
+          <field length="1" scale="0" type="string">0</field>
+        </data>
+        <data name="TOTAL_NUM">
+          <field length="2" scale="0" type="string">-1</field>
+        </data>
+      </struct>
+    </data>
+  </app-header>
+  <local-header>
+    <data name="LOCAL_HEAD">
+      <struct/>
+    </data>
+  </local-header>
+  <body>
+    <data name="USER_ID">
+      <field length="7" scale="0" type="string">01C0161</field>
+    </data>
+    <data name="RB_CONTACT_ARRAY">
+      <array>
+        <struct>
+          <data name="GOBAL_ID">
+            <field type="string" length="18">511423198711100053</field>
+          </data>
+          <data name="GOBAL_ID_TYPE">
+            <field type="string" length="1">0</field>
+          </data>
+        </struct>
+        <struct>
+          <data name="GOBAL_ID">
+            <field type="string" length="18">511423198711100037</field>
+          </data>
+          <data name="GOBAL_ID_TYPE">
+            <field type="string" length="1">0</field>
+          </data>
+        </struct>
+      </array>
+    </data>
+  </body>
+</service>

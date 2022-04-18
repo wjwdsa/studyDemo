@@ -1,0 +1,14 @@
+/.idea/
+*.iml
+
+# Project exclude paths
+/config/target/
+/install.jar/target/
+/lib.cryptography/target/
+/lib.esb/target/
+/lib.sms/target/
+/lib.sms.config/target/
+/lib.webservice/target/
+/run/target/
+/service/target/
+/test/target/

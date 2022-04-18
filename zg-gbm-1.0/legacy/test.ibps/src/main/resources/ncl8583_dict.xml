@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="GB2312"?>
+<dict xmlns="http://bios.noc.org/cm/ncl8583/configuration/dict" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<btjg btxh="1" dlx="0" dcd="5">
+		<sjzd sjbm="0010" sjlx="1" sjcd="5" xsws="0" mc="批量笔数" />
+	</btjg>
+	<btjg btxh="2" dlx="2" dcd="32">
+		<sjzd sjbm="0020" sjlx="0" sjcd="32" xsws="0" mc="主帐号" />
+	</btjg>
+	<btjg btxh="3" dlx="0" dcd="4">
+		<sjzd sjbm="0030" sjlx="0" sjcd="4" xsws="0" mc="交易码" />
+	</btjg>
+	<btjg btxh="4" dlx="0" dcd="12">
+		<sjzd sjbm="0040" sjlx="4" sjcd="12" xsws="2" mc="金额１（发生额）" />
+	</btjg>
+	<btjg btxh="5" dlx="0" dcd="12">
+		<sjzd sjbm="0050" sjlx="4" sjcd="12" xsws="2" mc="金额２" />
+	</btjg>
+	<btjg btxh="6" dlx="0" dcd="12">
+		<sjzd sjbm="0060" sjlx="4" sjcd="12" xsws="2" mc="金额３" />
+	</btjg>
+	<btjg btxh="7" dlx="0" dcd="10">
+		<sjzd sjbm="0070" sjlx="1" sjcd="10" xsws="0" mc="传输日期和时间" />
+	</btjg>
+	<btjg btxh="8" dlx="0" dcd="32">
+		<sjzd sjbm="0080" sjlx="0" sjcd="32" xsws="0" mc="主帐号" />
+	</btjg>
+	<btjg btxh="9" dlx="0" dcd="3">
+		<sjzd sjbm="0090" sjlx="0" sjcd="3" xsws="0" mc="分帐号" />
+	</btjg>
+	<btjg btxh="10" dlx="0" dcd="19">
+		<sjzd sjbm="0100" sjlx="0" sjcd="19" xsws="0" mc="卡号" />
+	</btjg>
+	<btjg btxh="11" dlx="0" dcd="6">
+		<sjzd sjbm="0110" sjlx="1" sjcd="6" xsws="0" mc="系统跟踪审计号" />
+	</btjg>
+	<btjg btxh="12" dlx="0" dcd="6">
+		<sjzd sjbm="0120" sjlx="1" sjcd="6" xsws="0" mc="发生时间" />
+	</btjg>
+	<btjg btxh="13" dlx="0" dcd="8">
+		<sjzd sjbm="0130" sjlx="1" sjcd="8" xsws="0" mc="发生日期" />
+	</btjg>
+	<btjg btxh="14" dlx="0" dcd="8">
+		<sjzd sjbm="0140" sjlx="1" sjcd="8" xsws="0" mc="日期1" />
+	</btjg>
+	<btjg btxh="15" dlx="0" dcd="8">
+		<sjzd sjbm="0150" sjlx="1" sjcd="8" xsws="0" mc="日期2" />
+	</btjg>
+	<btjg btxh="16" dlx="0" dcd="4">
+		<sjzd sjbm="0160" sjlx="0" sjcd="4" xsws="0" mc="操作员号" />
+	</btjg>
+	<btjg btxh="17" dlx="0" dcd="4">
+		<sjzd sjbm="0170" sjlx="0" sjcd="4" xsws="0" mc="授权人" />
+	</btjg>
+	<btjg btxh="18" dlx="0" dcd="4">
+		<sjzd sjbm="0180" sjlx="0" sjcd="4" xsws="0" mc="复核员号" />
+	</btjg>
+	<btjg btxh="19" dlx="0" dcd="20">
+		<sjzd sjbm="0190" sjlx="0" sjcd="20" xsws="0" mc="口令" />
+	</btjg>
+	<btjg btxh="20" dlx="0" dcd="10">
+		<sjzd sjbm="0200" sjlx="0" sjcd="10" xsws="0" mc="科目号1" />
+	</btjg>
+	<btjg btxh="21" dlx="0" dcd="10">
+		<sjzd sjbm="0210" sjlx="0" sjcd="10" xsws="0" mc="科目号2" />
+	</btjg>
+	<btjg btxh="22" dlx="0" dcd="3">
+		<sjzd sjbm="0220" sjlx="0" sjcd="3" xsws="0" mc="服务点进入方式" />
+	</btjg>
+	<btjg btxh="23" dlx="0" dcd="3">
+		<sjzd sjbm="0230" sjlx="0" sjcd="3" xsws="0" mc="项目电报号" />
+	</btjg>
+	<btjg btxh="24" dlx="0" dcd="8">
+		<sjzd sjbm="0240" sjlx="1" sjcd="8" xsws="0" mc="主机流水号" />
+	</btjg>
+	<btjg btxh="25" dlx="0" dcd="5">
+		<sjzd sjbm="0250" sjlx="1" sjcd="5" xsws="0" mc="POS流水号" />
+	</btjg>
+	<btjg btxh="26" dlx="0" dcd="8">
+		<sjzd sjbm="0260" sjlx="1" sjcd="8" xsws="0" mc="相关流水号" />
+	</btjg>
+	<btjg btxh="27" dlx="0" dcd="1">
+		<sjzd sjbm="0270" sjlx="0" sjcd="1" xsws="0" mc="借/贷标志" />
+	</btjg>
+	<btjg btxh="28" dlx="0" dcd="12">
+		<sjzd sjbm="0280" sjlx="4" sjcd="12" xsws="2" mc="金额" />
+	</btjg>
+	<btjg btxh="29" dlx="0" dcd="12">
+		<sjzd sjbm="0290" sjlx="4" sjcd="12" xsws="2" mc="金额" />
+	</btjg>
+	<btjg btxh="30" dlx="0" dcd="12">
+		<sjzd sjbm="0300" sjlx="4" sjcd="12" xsws="2" mc="金额" />
+	</btjg>
+	<btjg btxh="31" dlx="0" dcd="12">
+		<sjzd sjbm="0310" sjlx="4" sjcd="12" xsws="2" mc="金额" />
+	</btjg>
+	<btjg btxh="32" dlx="2" dcd="9">
+		<sjzd sjbm="0320" sjlx="0" sjcd="9" xsws="0" mc="代理机构/开户所" />
+	</btjg>
+	<btjg btxh="33" dlx="2" dcd="9">
+		<sjzd sjbm="0330" sjlx="0" sjcd="9" xsws="0" mc="发送机构/发生所" />
+	</btjg>
+	<btjg btxh="34" dlx="2" dcd="32">
+		<sjzd sjbm="0340" sjlx="0" sjcd="32" xsws="0" mc="帐号４" />
+	</btjg>
+	<btjg btxh="35" dlx="2" dcd="37">
+		<sjzd sjbm="0350" sjlx="0" sjcd="37" xsws="0" mc="第二磁道数据" />
+	</btjg>
+	<btjg btxh="36" dlx="3" dcd="104">
+		<sjzd sjbm="0360" sjlx="0" sjcd="104" xsws="0" mc="第三磁道数据" />
+	</btjg>
+	<btjg btxh="37" dlx="0" dcd="10">
+		<sjzd sjbm="0370" sjlx="0" sjcd="10" xsws="0" mc="控制标志" />
+	</btjg>
+	<btjg btxh="38" dlx="0" dcd="3">
+		<sjzd sjbm="0380" sjlx="1" sjcd="3" xsws="0" mc="摘要码" />
+	</btjg>
+	<btjg btxh="39" dlx="0" dcd="4">
+		<sjzd sjbm="0390" sjlx="0" sjcd="4" xsws="0" mc="响应代码" />
+	</btjg>
+	<btjg btxh="40" dlx="0" dcd="2">
+		<sjzd sjbm="0400" sjlx="0" sjcd="2" xsws="0" mc="储种号" />
+	</btjg>
+	<btjg btxh="41" dlx="0" dcd="3">
+		<sjzd sjbm="0410" sjlx="1" sjcd="3" xsws="0" mc="短整数1" />
+	</btjg>
+	<btjg btxh="42" dlx="0" dcd="16">
+		<sjzd sjbm="0420" sjlx="6" sjcd="16" xsws="0" mc="帐户密码" />
+	</btjg>
+	<btjg btxh="43" dlx="0" dcd="16">
+		<sjzd sjbm="0430" sjlx="0" sjcd="16" xsws="0" mc="凭证号" />
+	</btjg>
+	<btjg btxh="44" dlx="2" dcd="20">
+		<sjzd sjbm="0440" sjlx="0" sjcd="20" xsws="0" mc="证件号码" />
+	</btjg>
+	<btjg btxh="45" dlx="2" dcd="76">
+		<sjzd sjbm="0450" sjlx="0" sjcd="76" xsws="0" mc="第一磁道数据" />
+	</btjg>
+	<btjg btxh="46" dlx="3" dcd="32">
+		<sjzd sjbm="0460" sjlx="0" sjcd="32" xsws="0" mc="主帐号2" />
+	</btjg>
+	<btjg btxh="47" dlx="3" dcd="3">
+		<sjzd sjbm="0470" sjlx="0" sjcd="3" xsws="0" mc="分帐号2" />
+	</btjg>
+	<btjg btxh="48" dlx="3" dcd="19">
+		<sjzd sjbm="0480" sjlx="0" sjcd="19" xsws="0" mc="卡号2" />
+	</btjg>
+	<btjg btxh="49" dlx="0" dcd="2">
+		<sjzd sjbm="0490" sjlx="0" sjcd="2" xsws="0" mc="币种" />
+	</btjg>
+	<btjg btxh="50" dlx="3" dcd="171">
+		<sjzd sjbm="0500" sjlx="0" sjcd="0" xsws="0" mc="基本分户帐首结构" />
+		<sjzd sjbm="0501" sjlx="0" sjcd="40" xsws="0" mc="姓名" />
+		<sjzd sjbm="0502" sjlx="0" sjcd="40" xsws="0" mc="姓名拼音" />
+		<sjzd sjbm="0503" sjlx="0" sjcd="1" xsws="0" mc="证件类型" />
+		<sjzd sjbm="0504" sjlx="0" sjcd="20" xsws="0" mc="证件号码" />
+		<sjzd sjbm="0505" sjlx="0" sjcd="50" xsws="0" mc="地址" />
+		<sjzd sjbm="0506" sjlx="0" sjcd="18" xsws="0" mc="电话" />
+		<sjzd sjbm="0507" sjlx="0" sjcd="1" xsws="0" mc="印密标志" />
+		<sjzd sjbm="0508" sjlx="0" sjcd="1" xsws="0" mc="帐户性质" />
+	</btjg>
+	<btjg btxh="51" dlx="3" dcd="178">
+		<sjzd sjbm="0510" sjlx="0" sjcd="0" xsws="0" mc="基本客户资料结构" />
+		<sjzd sjbm="0511" sjlx="0" sjcd="40" xsws="0" mc="客户姓名" />
+		<sjzd sjbm="0512" sjlx="0" sjcd="1" xsws="0" mc="性别" />
+		<sjzd sjbm="0513" sjlx="0" sjcd="40" xsws="0" mc="姓名拼音" />
+		<sjzd sjbm="0514" sjlx="0" sjcd="1" xsws="0" mc="证件类型" />
+		<sjzd sjbm="0515" sjlx="0" sjcd="20" xsws="0" mc="证件号码" />
+		<sjzd sjbm="0516" sjlx="0" sjcd="20" xsws="0" mc="电话" />
+		<sjzd sjbm="0517" sjlx="0" sjcd="6" xsws="0" mc="邮编" />
+		<sjzd sjbm="0518" sjlx="0" sjcd="50" xsws="0" mc="地址" />
+	</btjg>
+	<btjg btxh="52" dlx="0" dcd="16">
+		<sjzd sjbm="0520" sjlx="6" sjcd="16" xsws="0" mc="密码" />
+	</btjg>
+	<btjg btxh="53" dlx="0" dcd="16">
+		<sjzd sjbm="0530" sjlx="0" sjcd="16" xsws="0" mc="凭证号1" />
+	</btjg>
+	<btjg btxh="54" dlx="3" dcd="278">
+		<sjzd sjbm="0540" sjlx="0" sjcd="0" xsws="0" mc="代理单位资料结构" />
+		<sjzd sjbm="0541" sjlx="1" sjcd="5" xsws="0" mc="业务编号" />
+		<sjzd sjbm="0542" sjlx="0" sjcd="32" xsws="0" mc="过渡帐号" />
+		<sjzd sjbm="0543" sjlx="0" sjcd="120" xsws="0" mc="单位名称" />
+		<sjzd sjbm="0544" sjlx="1" sjcd="7" xsws="0" mc="代理人数" />
+		<sjzd sjbm="0545" sjlx="4" sjcd="16" xsws="2" mc="代理总额" />
+		<sjzd sjbm="0546" sjlx="0" sjcd="20" xsws="0" mc="电话" />
+		<sjzd sjbm="0547" sjlx="0" sjcd="40" xsws="0" mc="地址" />
+		<sjzd sjbm="0548" sjlx="0" sjcd="32" xsws="0" mc="结算帐号" />
+		<sjzd sjbm="0549" sjlx="0" sjcd="6" xsws="0" mc="标志" />
+	</btjg>
+	<btjg btxh="55" dlx="3" dcd="84">
+		<sjzd sjbm="0550" sjlx="0" sjcd="0" xsws="0" mc="外币找零兑换凭证" />
+		<sjzd sjbm="0551" sjlx="0" sjcd="10" xsws="0" mc="外币借方科目号" />
+		<sjzd sjbm="0552" sjlx="0" sjcd="10" xsws="0" mc="外币贷方科目号" />
+		<sjzd sjbm="0553" sjlx="0" sjcd="10" xsws="0" mc="人民币借方科目号" />
+		<sjzd sjbm="0554" sjlx="0" sjcd="10" xsws="0" mc="人民币贷方科目号" />
+		<sjzd sjbm="0555" sjlx="1" sjcd="8" xsws="0" mc="日期" />
+		<sjzd sjbm="0556" sjlx="0" sjcd="2" xsws="0" mc="币种" />
+		<sjzd sjbm="0557" sjlx="4" sjcd="12" xsws="2" mc="外币金额" />
+		<sjzd sjbm="0558" sjlx="2" sjcd="10" xsws="4" mc="中间价" />
+		<sjzd sjbm="0559" sjlx="4" sjcd="12" xsws="2" mc="人民币金额" />
+	</btjg>
+	<btjg btxh="56" dlx="3" dcd="59">
+		<sjzd sjbm="0560" sjlx="0" sjcd="0" xsws="0" mc="存折打印结构" />
+		<sjzd sjbm="0561" sjlx="1" sjcd="3" xsws="0" mc="打印行号" />
+		<sjzd sjbm="0562" sjlx="1" sjcd="8" xsws="0" mc="发生日期" />
+		<sjzd sjbm="0563" sjlx="0" sjcd="10" xsws="0" mc="摘要" />
+		<sjzd sjbm="0564" sjlx="0" sjcd="1" xsws="0" mc="借贷标志" />
+		<sjzd sjbm="0565" sjlx="4" sjcd="12" xsws="2" mc="发生额" />
+		<sjzd sjbm="0566" sjlx="4" sjcd="12" xsws="2" mc="余额" />
+		<sjzd sjbm="0567" sjlx="0" sjcd="4" xsws="0" mc="操作员号" />
+		<sjzd sjbm="0568" sjlx="0" sjcd="4" xsws="0" mc="复核员号" />
+		<sjzd sjbm="0569" sjlx="0" sjcd="5" xsws="0" mc="发生所号" />
+	</btjg>
+	<btjg btxh="57" dlx="3" dcd="229">
+		<sjzd sjbm="0570" sjlx="0" sjcd="0" xsws="0" mc="表外记帐结构" />
+		<sjzd sjbm="0571" sjlx="0" sjcd="20" xsws="0" mc="证券名称1" />
+		<sjzd sjbm="0572" sjlx="4" sjcd="9" xsws="2" mc="金额1" />
+		<sjzd sjbm="0573" sjlx="1" sjcd="5" xsws="0" mc="数量1" />
+		<sjzd sjbm="0574" sjlx="0" sjcd="20" xsws="0" mc="证券名称2" />
+		<sjzd sjbm="0575" sjlx="4" sjcd="9" xsws="2" mc="金额2" />
+		<sjzd sjbm="0576" sjlx="1" sjcd="5" xsws="0" mc="数量2" />
+		<sjzd sjbm="0577" sjlx="0" sjcd="20" xsws="0" mc="证券名称3" />
+		<sjzd sjbm="0578" sjlx="4" sjcd="9" xsws="2" mc="金额3" />
+		<sjzd sjbm="0579" sjlx="1" sjcd="5" xsws="0" mc="数量3" />
+		<sjzd sjbm="057A" sjlx="0" sjcd="1" xsws="0" mc="证件类型" />
+		<sjzd sjbm="057B" sjlx="0" sjcd="20" xsws="0" mc="证件号码" />
+		<sjzd sjbm="057C" sjlx="0" sjcd="50" xsws="0" mc="地址" />
+		<sjzd sjbm="057D" sjlx="0" sjcd="40" xsws="0" mc="户名" />
+		<sjzd sjbm="057E" sjlx="4" sjcd="16" xsws="2" mc="总金额" />
+	</btjg>
+	<btjg btxh="58" dlx="3" dcd="234">
+		<sjzd sjbm="0580" sjlx="0" sjcd="0" xsws="0" mc="利息清单结构" />
+		<sjzd sjbm="0581" sjlx="0" sjcd="10" xsws="0" mc="科目号" />
+		<sjzd sjbm="0582" sjlx="0" sjcd="2" xsws="0" mc="币种号" />
+		<sjzd sjbm="0583" sjlx="0" sjcd="2" xsws="0" mc="储种号" />
+		<sjzd sjbm="0584" sjlx="0" sjcd="32" xsws="0" mc="主帐号" />
+		<sjzd sjbm="0585" sjlx="0" sjcd="3" xsws="0" mc="分帐号" />
+		<sjzd sjbm="0586" sjlx="0" sjcd="40" xsws="0" mc="户名" />
+		<sjzd sjbm="0587" sjlx="4" sjcd="12" xsws="2" mc="本金" />
+		<sjzd sjbm="0588" sjlx="4" sjcd="12" xsws="2" mc="实付息" />
+		<sjzd sjbm="0589" sjlx="4" sjcd="12" xsws="2" mc="尾数" />
+		<sjzd sjbm="058A" sjlx="1" sjcd="8" xsws="0" mc="起息日" />
+		<sjzd sjbm="058B" sjlx="1" sjcd="5" xsws="0" mc="天数" />
+		<sjzd sjbm="058C" sjlx="2" sjcd="8" xsws="6" mc="利率" />
+		<sjzd sjbm="058D" sjlx="4" sjcd="12" xsws="2" mc="应付息" />
+		<sjzd sjbm="058E" sjlx="1" sjcd="8" xsws="0" mc="起息日" />
+		<sjzd sjbm="058F" sjlx="1" sjcd="5" xsws="0" mc="天数" />
+		<sjzd sjbm="058G" sjlx="2" sjcd="8" xsws="6" mc="利率" />
+		<sjzd sjbm="058H" sjlx="4" sjcd="12" xsws="2" mc="应付息" />
+		<sjzd sjbm="058I" sjlx="1" sjcd="8" xsws="0" mc="起息日" />
+		<sjzd sjbm="058J" sjlx="1" sjcd="5" xsws="0" mc="天数" />
+		<sjzd sjbm="058K" sjlx="2" sjcd="8" xsws="6" mc="利率" />
+		<sjzd sjbm="058L" sjlx="4" sjcd="12" xsws="2" mc="应付息" />
+		<sjzd sjbm="058M" sjlx="0" sjcd="10" xsws="0" mc="保值科目号" />
+	</btjg>
+	<btjg btxh="59" dlx="3" dcd="93">
+		<sjzd sjbm="0590" sjlx="0" sjcd="0" xsws="0" mc="帐户状态结构" />
+		<sjzd sjbm="0591" sjlx="0" sjcd="40" xsws="0" mc="姓名" />
+		<sjzd sjbm="0592" sjlx="0" sjcd="1" xsws="0" mc="证件类型" />
+		<sjzd sjbm="0593" sjlx="0" sjcd="20" xsws="0" mc="证件号码" />
+		<sjzd sjbm="0594" sjlx="0" sjcd="10" xsws="0" mc="挂失状态" />
+		<sjzd sjbm="0595" sjlx="0" sjcd="16" xsws="0" mc="冻结状态" />
+		<sjzd sjbm="0596" sjlx="0" sjcd="6" xsws="0" mc="止付状态" />
+	</btjg>
+	<btjg btxh="60" dlx="3" dcd="15">
+		<sjzd sjbm="0600" sjlx="0" sjcd="0" xsws="0" mc="假托机结构" />
+		<sjzd sjbm="0601" sjlx="0" sjcd="1" xsws="0" mc="传送标志" />
+		<sjzd sjbm="0602" sjlx="0" sjcd="4" xsws="0" mc="编码" />
+		<sjzd sjbm="0603" sjlx="0" sjcd="10" xsws="0" mc="用户数据" />
+	</btjg>
+	<btjg btxh="61" dlx="3" dcd="8">
+		<sjzd sjbm="0610" sjlx="2" sjcd="8" xsws="6" mc="利率" />
+	</btjg>
+	<btjg btxh="62" dlx="3" dcd="4">
+		<sjzd sjbm="0620" sjlx="1" sjcd="4" xsws="0" mc="短整数2" />
+	</btjg>
+	<btjg btxh="63" dlx="3" dcd="1">
+		<sjzd sjbm="0630" sjlx="0" sjcd="1" xsws="0" mc="状态标志" />
+	</btjg>
+	<btjg btxh="64" dlx="0" dcd="16">
+		<sjzd sjbm="0640" sjlx="6" sjcd="16" xsws="0" mc="客户密码" />
+	</btjg>
+	<btjg btxh="65" dlx="0" dcd="2">
+		<sjzd sjbm="0650" sjlx="1" sjcd="2" xsws="0" mc="" />
+	</btjg>
+	<btjg btxh="66" dlx="0" dcd="1">
+		<sjzd sjbm="0660" sjlx="0" sjcd="1" xsws="0" mc="状态２" />
+	</btjg>
+	<btjg btxh="67" dlx="0" dcd="2">
+		<sjzd sjbm="0670" sjlx="0" sjcd="2" xsws="0" mc="状态４" />
+	</btjg>
+	<btjg btxh="68" dlx="0" dcd="16">
+		<sjzd sjbm="0680" sjlx="2" sjcd="16" xsws="2" mc="利息/积数1" />
+	</btjg>
+	<btjg btxh="69" dlx="0" dcd="16">
+		<sjzd sjbm="0690" sjlx="2" sjcd="16" xsws="2" mc="利息/积数2" />
+	</btjg>
+	<btjg btxh="70" dlx="0" dcd="3">
+		<sjzd sjbm="0700" sjlx="1" sjcd="3" xsws="0" mc="约期次数" />
+	</btjg>
+	<btjg btxh="71" dlx="0" dcd="4">
+		<sjzd sjbm="0710" sjlx="1" sjcd="4" xsws="0" mc="序号" />
+	</btjg>
+	<btjg btxh="72" dlx="0" dcd="3">
+		<sjzd sjbm="0720" sjlx="1" sjcd="3" xsws="0" mc="打折行数" />
+	</btjg>
+	<btjg btxh="73" dlx="0" dcd="8">
+		<sjzd sjbm="0730" sjlx="1" sjcd="8" xsws="0" mc="日期" />
+	</btjg>
+	<btjg btxh="74" dlx="0" dcd="12">
+		<sjzd sjbm="0740" sjlx="1" sjcd="12" xsws="0" mc="整数１" />
+	</btjg>
+	<btjg btxh="75" dlx="0" dcd="10">
+		<sjzd sjbm="0750" sjlx="1" sjcd="10" xsws="0" mc="整数２" />
+	</btjg>
+	<btjg btxh="76" dlx="0" dcd="10">
+		<sjzd sjbm="0760" sjlx="1" sjcd="10" xsws="0" mc="整数３" />
+	</btjg>
+	<btjg btxh="77" dlx="0" dcd="10">
+		<sjzd sjbm="0770" sjlx="1" sjcd="10" xsws="0" mc="整数４" />
+	</btjg>
+	<btjg btxh="78" dlx="0" dcd="10">
+		<sjzd sjbm="0780" sjlx="1" sjcd="10" xsws="0" mc="整数５" />
+	</btjg>
+	<btjg btxh="79" dlx="0" dcd="10">
+		<sjzd sjbm="0790" sjlx="1" sjcd="10" xsws="0" mc="整数６" />
+	</btjg>
+	<btjg btxh="80" dlx="0" dcd="10">
+		<sjzd sjbm="0800" sjlx="1" sjcd="10" xsws="0" mc="整数７" />
+	</btjg>
+	<btjg btxh="81" dlx="0" dcd="9">
+		<sjzd sjbm="0810" sjlx="1" sjcd="9" xsws="0" mc="客户号" />
+	</btjg>
+	<btjg btxh="82" dlx="0" dcd="4">
+		<sjzd sjbm="0820" sjlx="0" sjcd="4" xsws="0" mc="前台终端号" />
+	</btjg>
+	<btjg btxh="83" dlx="0" dcd="4">
+		<sjzd sjbm="0830" sjlx="1" sjcd="4" xsws="0" mc="文件记录宽度" />
+	</btjg>
+	<btjg btxh="84" dlx="0" dcd="16">
+		<sjzd sjbm="0840" sjlx="0" sjcd="16" xsws="0" mc="凭证号1" />
+	</btjg>
+	<btjg btxh="85" dlx="0" dcd="16">
+		<sjzd sjbm="0850" sjlx="0" sjcd="16" xsws="0" mc="凭证号2" />
+	</btjg>
+	<btjg btxh="86" dlx="0" dcd="16">
+		<sjzd sjbm="0860" sjlx="4" sjcd="16" xsws="2" mc="金额８" />
+	</btjg>
+	<btjg btxh="87" dlx="0" dcd="16">
+		<sjzd sjbm="0870" sjlx="4" sjcd="16" xsws="2" mc="金额９　" />
+	</btjg>
+	<btjg btxh="88" dlx="0" dcd="16">
+		<sjzd sjbm="0880" sjlx="4" sjcd="16" xsws="2" mc="金额１０" />
+	</btjg>
+	<btjg btxh="89" dlx="0" dcd="16">
+		<sjzd sjbm="0890" sjlx="4" sjcd="16" xsws="2" mc="金额１１" />
+	</btjg>
+	<btjg btxh="90" dlx="0" dcd="6">
+		<sjzd sjbm="0900" sjlx="1" sjcd="6" xsws="0" mc="" />
+	</btjg>
+	<btjg btxh="91" dlx="0" dcd="1">
+		<sjzd sjbm="0910" sjlx="1" sjcd="1" xsws="0" mc="场次" />
+	</btjg>
+	<btjg btxh="92" dlx="0" dcd="2">
+		<sjzd sjbm="0920" sjlx="0" sjcd="2" xsws="0" mc="状态３" />
+	</btjg>
+	<btjg btxh="93" dlx="0" dcd="8">
+		<sjzd sjbm="0930" sjlx="0" sjcd="8" xsws="0" mc="联行号" />
+	</btjg>
+	<btjg btxh="94" dlx="0" dcd="16">
+		<sjzd sjbm="0940" sjlx="0" sjcd="16" xsws="0" mc="支票密码" />
+	</btjg>
+	<btjg btxh="95" dlx="0" dcd="120">
+		<sjzd sjbm="0950" sjlx="0" sjcd="120" xsws="0" mc="备注2" />
+	</btjg>
+	<btjg btxh="96" dlx="0" dcd="10">
+		<sjzd sjbm="0960" sjlx="2" sjcd="10" xsws="4" mc="中间价" />
+	</btjg>
+	<btjg btxh="97" dlx="0" dcd="17">
+		<sjzd sjbm="0970" sjlx="0" sjcd="17" xsws="0" mc="" />
+	</btjg>
+	<btjg btxh="98" dlx="0" dcd="32">
+		<sjzd sjbm="0980" sjlx="0" sjcd="32" xsws="0" mc="帐号5" />
+	</btjg>
+	<btjg btxh="99" dlx="2" dcd="9">
+		<sjzd sjbm="0990" sjlx="0" sjcd="9" xsws="0" mc="交换号" />
+	</btjg>
+	<btjg btxh="100" dlx="2" dcd="9">
+		<sjzd sjbm="1000" sjlx="1" sjcd="9" xsws="0" mc="接受机构" />
+	</btjg>
+	<btjg btxh="101" dlx="2" dcd="20">
+		<sjzd sjbm="1010" sjlx="0" sjcd="20" xsws="0" mc="有效证件" />
+	</btjg>
+	<btjg btxh="102" dlx="2" dcd="32">
+		<sjzd sjbm="1020" sjlx="0" sjcd="32" xsws="0" mc="帐号２" />
+	</btjg>
+	<btjg btxh="103" dlx="2" dcd="32">
+		<sjzd sjbm="1030" sjlx="0" sjcd="32" xsws="0" mc="帐号３" />
+	</btjg>
+	<btjg btxh="104" dlx="3" dcd="120">
+		<sjzd sjbm="1040" sjlx="0" sjcd="120" xsws="0" mc="备注1" />
+	</btjg>
+	<btjg btxh="105" dlx="3" dcd="40">
+		<sjzd sjbm="1050" sjlx="0" sjcd="40" xsws="0" mc="姓名" />
+	</btjg>
+	<btjg btxh="106" dlx="3" dcd="5">
+		<sjzd sjbm="1060" sjlx="1" sjcd="5" xsws="0" mc="被冲POS流水号" />
+	</btjg>
+	<btjg btxh="107" dlx="3" dcd="1">
+		<sjzd sjbm="1070" sjlx="0" sjcd="1" xsws="0" mc="标志1" />
+	</btjg>
+	<btjg btxh="108" dlx="3" dcd="1">
+		<sjzd sjbm="1080" sjlx="0" sjcd="1" xsws="0" mc="标志2" />
+	</btjg>
+	<btjg btxh="109" dlx="3" dcd="1">
+		<sjzd sjbm="1090" sjlx="0" sjcd="1" xsws="0" mc="标志3" />
+	</btjg>
+	<btjg btxh="110" dlx="3" dcd="1">
+		<sjzd sjbm="1100" sjlx="0" sjcd="1" xsws="0" mc="标志3" />
+	</btjg>
+	<btjg btxh="111" dlx="3" dcd="1">
+		<sjzd sjbm="1110" sjlx="0" sjcd="1" xsws="0" mc="标志4" />
+	</btjg>
+	<btjg btxh="112" dlx="3" dcd="16">
+		<sjzd sjbm="1120" sjlx="0" sjcd="0" xsws="0" mc="基本交易结构" />
+		<sjzd sjbm="1121" sjlx="0" sjcd="4" xsws="0" mc="交易代码" />
+		<sjzd sjbm="1122" sjlx="0" sjcd="1" xsws="0" mc="交易子类" />
+		<sjzd sjbm="1123" sjlx="0" sjcd="3" xsws="0" mc="记帐员" />
+		<sjzd sjbm="1124" sjlx="0" sjcd="3" xsws="0" mc="复核员" />
+		<sjzd sjbm="1125" sjlx="0" sjcd="1" xsws="0" mc="批量方式" />
+		<sjzd sjbm="1126" sjlx="0" sjcd="4" xsws="0" mc="菜单代码" />
+	</btjg>
+	<btjg btxh="113" dlx="3" dcd="84">
+		<sjzd sjbm="1130" sjlx="0" sjcd="0" xsws="0" mc="结算交易结构" />
+		<sjzd sjbm="1131" sjlx="0" sjcd="3" xsws="0" mc="凭证类1" />
+		<sjzd sjbm="1132" sjlx="0" sjcd="16" xsws="0" mc="凭证号1" />
+		<sjzd sjbm="1133" sjlx="0" sjcd="2" xsws="0" mc="摘要1" />
+		<sjzd sjbm="113B" sjlx="0" sjcd="3" xsws="0" mc="凭证类2" />
+		<sjzd sjbm="113C" sjlx="0" sjcd="16" xsws="0" mc="凭证号2" />
+		<sjzd sjbm="113D" sjlx="0" sjcd="2" xsws="0" mc="摘要2" />
+		<sjzd sjbm="113E" sjlx="0" sjcd="3" xsws="0" mc="凭证类3" />
+		<sjzd sjbm="113F" sjlx="0" sjcd="16" xsws="0" mc="凭证号3" />
+		<sjzd sjbm="113G" sjlx="0" sjcd="2" xsws="0" mc="摘要3" />
+		<sjzd sjbm="113H" sjlx="0" sjcd="3" xsws="0" mc="凭证类4" />
+		<sjzd sjbm="113I" sjlx="0" sjcd="16" xsws="0" mc="凭证号4" />
+		<sjzd sjbm="113J" sjlx="0" sjcd="2" xsws="0" mc="摘要4" />
+	</btjg>
+	<btjg btxh="114" dlx="3" dcd="205">
+		<sjzd sjbm="1140" sjlx="0" sjcd="0" xsws="0" mc="基本分户结构" />
+		<sjzd sjbm="1141" sjlx="0" sjcd="10" xsws="0" mc="科目号" />
+		<sjzd sjbm="1142" sjlx="0" sjcd="10" xsws="0" mc="指标体系代码" />
+		<sjzd sjbm="1143" sjlx="0" sjcd="20" xsws="0" mc="电话" />
+		<sjzd sjbm="1144" sjlx="0" sjcd="10" xsws="0" mc="联系人" />
+		<sjzd sjbm="1145" sjlx="0" sjcd="50" xsws="0" mc="地址" />
+		<sjzd sjbm="1146" sjlx="2" sjcd="8" xsws="6" mc="常规利率" />
+		<sjzd sjbm="1147" sjlx="2" sjcd="8" xsws="6" mc="协定利率" />
+		<sjzd sjbm="1148" sjlx="2" sjcd="8" xsws="6" mc="非正常利率１" />
+		<sjzd sjbm="1149" sjlx="2" sjcd="8" xsws="6" mc="非正常利率２" />
+		<sjzd sjbm="114A" sjlx="2" sjcd="8" xsws="6" mc="利率" />
+		<sjzd sjbm="114B" sjlx="1" sjcd="8" xsws="0" mc="起息日" />
+		<sjzd sjbm="114C" sjlx="1" sjcd="8" xsws="0" mc="到期日" />
+		<sjzd sjbm="114D" sjlx="0" sjcd="6" xsws="0" mc="邮编" />
+		<sjzd sjbm="114E" sjlx="4" sjcd="19" xsws="2" mc="积数" />
+		<sjzd sjbm="114F" sjlx="2" sjcd="8" xsws="6" mc="复利利率" />
+		<sjzd sjbm="114G" sjlx="3" sjcd="8" xsws="0" mc="起息日" />
+		<sjzd sjbm="114H" sjlx="3" sjcd="8" xsws="0" mc="到期日" />
+	</btjg>
+	<btjg btxh="115" dlx="3" dcd="16">
+		<sjzd sjbm="1150" sjlx="0" sjcd="0" xsws="0" mc="基本代码结构" />
+		<sjzd sjbm="1151" sjlx="0" sjcd="1" xsws="0" mc="代码１" />
+		<sjzd sjbm="1152" sjlx="0" sjcd="1" xsws="0" mc="代码２" />
+		<sjzd sjbm="1153" sjlx="0" sjcd="2" xsws="0" mc="代码３" />
+		<sjzd sjbm="1154" sjlx="0" sjcd="2" xsws="0" mc="代码４" />
+		<sjzd sjbm="1155" sjlx="0" sjcd="3" xsws="0" mc="代码５" />
+		<sjzd sjbm="1156" sjlx="0" sjcd="3" xsws="0" mc="代码６" />
+		<sjzd sjbm="1157" sjlx="0" sjcd="4" xsws="0" mc="代码７" />
+	</btjg>
+	<btjg btxh="116" dlx="3" dcd="198">
+		<sjzd sjbm="1160" sjlx="0" sjcd="0" xsws="0" mc="客户信息结构" />
+		<sjzd sjbm="1161" sjlx="0" sjcd="20" xsws="0" mc="营业执照号" />
+		<sjzd sjbm="1162" sjlx="0" sjcd="120" xsws="0" mc="客户名称" />
+		<sjzd sjbm="1163" sjlx="0" sjcd="40" xsws="0" mc="上级主管单位" />
+		<sjzd sjbm="1164" sjlx="0" sjcd="10" xsws="0" mc="法人代表" />
+		<sjzd sjbm="1165" sjlx="3" sjcd="8" xsws="0" mc="开户日期" />
+	</btjg>
+	<btjg btxh="117" dlx="3" dcd="1">
+		<sjzd sjbm="1170" sjlx="0" sjcd="1" xsws="0" mc="" />
+	</btjg>
+	<btjg btxh="118" dlx="3" dcd="137">
+		<sjzd sjbm="1180" sjlx="0" sjcd="0" xsws="0" mc="短分户结构" />
+		<sjzd sjbm="1181" sjlx="0" sjcd="1" xsws="0" mc="余额方向" />
+		<sjzd sjbm="1182" sjlx="4" sjcd="16" xsws="2" mc="余额" />
+		<sjzd sjbm="1183" sjlx="0" sjcd="120" xsws="0" mc="户名" />
+	</btjg>
+	<btjg btxh="119" dlx="3" dcd="420">
+		<sjzd sjbm="1190" sjlx="0" sjcd="0" xsws="0" mc="联行类结构" />
+		<sjzd sjbm="1191" sjlx="0" sjcd="8" xsws="0" mc="甲行行号" />
+		<sjzd sjbm="1192" sjlx="0" sjcd="30" xsws="0" mc="甲行行名" />
+		<sjzd sjbm="1193" sjlx="0" sjcd="8" xsws="0" mc="乙行行号" />
+		<sjzd sjbm="1194" sjlx="0" sjcd="30" xsws="0" mc="乙行行名" />
+		<sjzd sjbm="1195" sjlx="0" sjcd="32" xsws="0" mc="收款人帐号" />
+		<sjzd sjbm="1196" sjlx="0" sjcd="120" xsws="0" mc="收款人户名" />
+		<sjzd sjbm="1197" sjlx="0" sjcd="32" xsws="0" mc="付款人帐号" />
+		<sjzd sjbm="1198" sjlx="0" sjcd="120" xsws="0" mc="付款人户名" />
+		<sjzd sjbm="1199" sjlx="0" sjcd="20" xsws="0" mc="汇出地" />
+		<sjzd sjbm="119A" sjlx="0" sjcd="20" xsws="0" mc="汇入地" />
+	</btjg>
+	<btjg btxh="120" dlx="3" dcd="76">
+		<sjzd sjbm="1200" sjlx="0" sjcd="0" xsws="0" mc="积数结构" />
+		<sjzd sjbm="1201" sjlx="4" sjcd="19" xsws="2" mc="积数1" />
+		<sjzd sjbm="1202" sjlx="4" sjcd="19" xsws="2" mc="积数2" />
+		<sjzd sjbm="1203" sjlx="4" sjcd="19" xsws="2" mc="积数3" />
+		<sjzd sjbm="1204" sjlx="4" sjcd="19" xsws="2" mc="积数4" />
+	</btjg>
+	<btjg btxh="121" dlx="3" dcd="42">
+		<sjzd sjbm="1210" sjlx="0" sjcd="42" xsws="0" mc="返回信息" />
+	</btjg>
+	<btjg btxh="122" dlx="3" dcd="570">
+		<sjzd sjbm="1220" sjlx="0" sjcd="0" xsws="0" mc="实时清算基本结构" />
+		<sjzd sjbm="1221" sjlx="5" sjcd="8" xsws="0" mc="电子凭证生成日期" />
+		<sjzd sjbm="1222" sjlx="5" sjcd="13" xsws="0" mc="凭证提交号" />
+		<sjzd sjbm="1223" sjlx="5" sjcd="5" xsws="0" mc="发起行号" />
+		<sjzd sjbm="1224" sjlx="5" sjcd="5" xsws="0" mc="接收行号" />
+		<sjzd sjbm="1225" sjlx="0" sjcd="3" xsws="0" mc="凭证种类" />
+		<sjzd sjbm="1226" sjlx="0" sjcd="20" xsws="0" mc="凭证种类名称" />
+		<sjzd sjbm="1227" sjlx="0" sjcd="2" xsws="0" mc="交易种类" />
+		<sjzd sjbm="1228" sjlx="5" sjcd="8" xsws="0" mc="出票日期" />
+		<sjzd sjbm="1229" sjlx="5" sjcd="8" xsws="0" mc="凭证编号" />
+		<sjzd sjbm="122A" sjlx="0" sjcd="32" xsws="0" mc="收款帐号" />
+		<sjzd sjbm="122B" sjlx="0" sjcd="120" xsws="0" mc="收款单位名称" />
+		<sjzd sjbm="122C" sjlx="0" sjcd="32" xsws="0" mc="付款帐号" />
+		<sjzd sjbm="122D" sjlx="0" sjcd="120" xsws="0" mc="付款单位名称" />
+		<sjzd sjbm="122E" sjlx="5" sjcd="15" xsws="0" mc="金额" />
+		<sjzd sjbm="122F" sjlx="0" sjcd="1" xsws="0" mc="借贷标志" />
+		<sjzd sjbm="122G" sjlx="0" sjcd="10" xsws="0" mc="付方密码" />
+		<sjzd sjbm="122H" sjlx="0" sjcd="10" xsws="0" mc="收方密码" />
+		<sjzd sjbm="122I" sjlx="0" sjcd="1" xsws="0" mc="事由代码" />
+		<sjzd sjbm="122J" sjlx="0" sjcd="30" xsws="0" mc="事由" />
+		<sjzd sjbm="122K" sjlx="5" sjcd="3" xsws="0" mc="附件张数" />
+		<sjzd sjbm="122L" sjlx="0" sjcd="2" xsws="0" mc="原交易代码" />
+		<sjzd sjbm="122M" sjlx="0" sjcd="20" xsws="0" mc="原凭证种类名称" />
+		<sjzd sjbm="122N" sjlx="0" sjcd="1" xsws="0" mc="附加信息标志" />
+		<sjzd sjbm="122O" sjlx="0" sjcd="40" xsws="0" mc="录入员姓名" />
+		<sjzd sjbm="122P" sjlx="0" sjcd="40" xsws="0" mc="复核员姓名" />
+		<sjzd sjbm="122Q" sjlx="0" sjcd="8" xsws="0" mc="原业务日期" />
+		<sjzd sjbm="122R" sjlx="0" sjcd="13" xsws="0" mc="原同城凭证提交号" />
+	</btjg>
+	<btjg btxh="123" dlx="3" dcd="120">
+		<sjzd sjbm="1230" sjlx="0" sjcd="0" xsws="0" mc="实时清算附加结构1" />
+		<sjzd sjbm="1231" sjlx="0" sjcd="30" xsws="0" mc="备注1" />
+		<sjzd sjbm="1232" sjlx="0" sjcd="30" xsws="0" mc="备注2" />
+		<sjzd sjbm="1233" sjlx="0" sjcd="30" xsws="0" mc="备注3" />
+		<sjzd sjbm="1234" sjlx="0" sjcd="30" xsws="0" mc="备注4" />
+	</btjg>
+	<btjg btxh="124" dlx="3" dcd="257">
+		<sjzd sjbm="1240" sjlx="0" sjcd="0" xsws="0" mc="实时清算附加结构2" />
+		<sjzd sjbm="1241" sjlx="0" sjcd="20" xsws="0" mc="票据名称" />
+		<sjzd sjbm="1242" sjlx="0" sjcd="8" xsws="0" mc="行号1" />
+		<sjzd sjbm="1243" sjlx="0" sjcd="18" xsws="0" mc="行名1" />
+		<sjzd sjbm="1244" sjlx="0" sjcd="8" xsws="0" mc="行号2" />
+		<sjzd sjbm="1245" sjlx="0" sjcd="18" xsws="0" mc="行名2" />
+		<sjzd sjbm="1246" sjlx="0" sjcd="15" xsws="0" mc="金额1" />
+		<sjzd sjbm="1247" sjlx="0" sjcd="15" xsws="0" mc="金额2" />
+		<sjzd sjbm="1248" sjlx="0" sjcd="15" xsws="0" mc="金额3" />
+		<sjzd sjbm="1249" sjlx="0" sjcd="120" xsws="0" mc="原收款人" />
+		<sjzd sjbm="124A" sjlx="0" sjcd="20" xsws="0" mc="地点" />
+	</btjg>
+	<btjg btxh="125" dlx="3" dcd="1">
+		<sjzd sjbm="1250" sjlx="0" sjcd="1" xsws="0" mc="" />
+	</btjg>
+	<btjg btxh="126" dlx="3" dcd="1">
+		<sjzd sjbm="1260" sjlx="0" sjcd="1" xsws="0" mc="" />
+	</btjg>
+	<btjg btxh="127" dlx="3" dcd="1">
+		<sjzd sjbm="1270" sjlx="0" sjcd="1" xsws="0" mc="" />
+	</btjg>
+	<btjg btxh="128" dlx="0" dcd="8">
+		<sjzd sjbm="1280" sjlx="0" sjcd="8" xsws="0" mc="" />
+	</btjg>
+</dict>

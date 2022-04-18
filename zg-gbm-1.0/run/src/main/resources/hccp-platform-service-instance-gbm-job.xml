@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:ctx="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:service="http://hccp.noc.org/schema/service/service"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                      http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd
+
+                      http://hccp.noc.org/schema/service/service http://hccp.noc.org/schema/service/service.xsd">
+
+
+    <ctx:component-scan base-package="com.dlyd.application.gbm.service"/>
+    <ctx:annotation-config/>
+    <bean id="service.ibps.qd.properties.configurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <value>classpath:hccp-platform-service-instance-gbm.properties</value>
+        </property>
+        <property name="placeholderPrefix" value="$SVC{"/>
+    </bean>
+
+    <service:scheduled-job-service id="GBM-JOB"
+                                   name="政府债券自动任务"
+                                   description="定时任务处理服务"
+                                   location="127.0.0.1"
+                                   tag="GBM-JOB"/>
+
+    <bean id="key.public" class="com.dlyd.application.lib.cryptography.PEMStringPublicKeyProvider">
+        <property name="pem" value="$SVC{service.gbm.key.public.pem}"/>
+    </bean>
+
+    <bean id="key.private" class="com.dlyd.application.lib.cryptography.MockedPrivateKeyProvider">
+    </bean>
+
+    <!-- RSA加密/解密 -->
+    <bean id="rsaEncryption.client" class="com.dlyd.application.lib.cryptography.RSAEncryptionFactory">
+        <property name="publicKey" ref="key.public"/>
+        <property name="privateKey" ref="key.private"/>
+    </bean>
+
+    <bean id="service.gbm.transactionReportingService"
+          class="com.dlyd.application.gbm.service.TransactionReportingServiceImpl">
+        <property name="bankId" value="$SVC{service.gbm.bankId}"/>
+        <property name="rsaEncryption" ref="rsaEncryption.client"/>
+    </bean>
+
+    <bean id="service.gbm.messageFactory" class="com.dlyd.application.lib.webservice.WsSoapHttpMessageFactory">
+    </bean>
+
+    <service:nio-http-connector key="WS"
+                                name="ktkj-http-connector"
+                                address="$SVC{service.gbm.connector.ws.host}"
+                                port="$SVC{service.gbm.connector.ws.port}"
+                                connectTimeout="$SVC{service.gbm.connector.ws.connectTimeout}"
+                                readTimeout="$SVC{service.gbm.connector.ws.readTimeout}"
+                                writeTimeout="$SVC{service.gbm.connector.ws.writeTimeout}"
+                                messageFactory="service.gbm.messageFactory"/>
+
+    <bean id="service.gbm.esbMessageFactory" class="com.dlyd.application.lib.esb.msg11.MessageFactoryBuilder ">
+    </bean>
+
+    <!-- 用于向ESB发送请求的Connector Channel Initializer/用于接收渠道请求的Listener -->
+    <bean id="service.gbm.connector.initializer.esb"
+          class="com.dlyd.application.lib.esb.listener.ESBConnectorSocketChannelInitializer">
+        <property name="messageFactory" ref="service.gbm.esbMessageFactory"/>
+    </bean>
+
+    <service:nio-tcp-connector key="ESB"
+                               name="esb-tcp-connector"
+                               address="$SVC{service.gbm.connector.esb.host}"
+                               port="$SVC{service.gbm.connector.esb.port}"
+                               channelInitializer="service.gbm.connector.initializer.esb"/>
+
+
+    <!-- Sms报文MessageFactory，用于向Sms系统发送短信-->
+    <bean id="service.sms.smsMessageFactory"
+          class="com.dlyd.application.sms.connector.SmsMessageFactory">
+        <property name="authorizationUserName" value="$SVC{service.sms.connector.user}"/>
+        <property name="authorizationPassword" value="$SVC{service.sms.connector.pass}"/>
+    </bean>
+
+    <!-- 向SMS发送请求的Connector -->
+    <!-- TODO:注意调整properties文件中的属性值 -->
+    <service:nio-http-connector key="SMS-HTTP"
+                                name="sms-http-connector"
+                                address="$SVC{service.sms.connector.host}"
+                                port="$SVC{service.sms.connector.port}"
+                                messageFactory="service.sms.smsMessageFactory"
+    />
+
+
+</beans>

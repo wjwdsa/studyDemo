@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:ctx="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:service="http://hccp.noc.org/schema/service/service"
+       xmlns:core="http://hccp.noc.org/schema/platform/core"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                      http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd
+
+                      http://hccp.noc.org/schema/service/service http://hccp.noc.org/schema/service/service.xsd
+                      http://hccp.noc.org/schema/platform/core http://hccp.noc.org/schema/platform/core.xsd">
+
+
+    <ctx:annotation-config/>
+    <!--    <ctx:component-scan base-package="com.dlyd.application.gbm.service"/>-->
+    <ctx:component-scan base-package="com.dlyd.application.gbm.service.ops"/>
+    <bean id="service.ibps.qd.properties.configurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <value>classpath:hccp-platform-service-instance-esb.properties</value>
+        </property>
+        <property name="placeholderPrefix" value="$SVC{"/>
+    </bean>
+
+
+    <!-- ESB报文MessageFactory，用于与ESB之间的报文发送/接收 -->
+    <bean id="service.esb.messageFactory" class="com.dlyd.application.lib.esb.msg11.MessageFactoryBuilder">
+    </bean>
+
+    <!-- 用于向核心发送请求的Connector Channel Initializer/用于接收渠道请求的Listener -->
+    <bean id="service.gbm.connector.initializer.esb"
+          class="com.dlyd.application.lib.esb.listener.ESBConnectorSocketChannelInitializer">
+        <property name="messageFactory" ref="service.esb.messageFactory"/>
+    </bean>
+
+    <!-- 接收ESB报文到Transaction Bean Name的转换类 -->
+    <!-- TODO:此处需要调整为实际的转换类 -->
+    <bean id="service.esb.transactionBeanNameResolver"
+          class="com.dlyd.application.gbm.service.esb.ESBBeanNameResolver">
+    </bean>
+
+    <!-- Spring Managed Transaction Bean Provider -->
+    <bean id="service.esb.transactionInstanceProvider"
+          class="org.noc.hccp.platform.service.SpringManagedTransactionInstanceProvider">
+        <property name="beanNameResolvingStrategies">
+            <list>
+                <ref bean="service.esb.transactionBeanNameResolver"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- TransactionBuilder,用于创建并配置具体的交易对象 -->
+    <!-- TODO:此处需要调整为实际的TransactionBuilder类 -->
+    <bean id="service.esb.transactionBuilder" class="com.dlyd.application.gbm.service.esb.ESBTransactionBuilder">
+        <property name="transactionInstanceProvider" ref="service.esb.transactionInstanceProvider"/>
+        <property name="sysTranCodeDAO" ref="sysTranCodeDAO"/>
+    </bean>
+
+    <!-- 服务配置 -->
+    <service:message-transaction-service id="GBM-ESB"
+                                         name="全渠道平台接收ESB请求服务"
+                                         description="全渠道平台接收ESB请求服务实例"
+                                         location="127.0.0.1"
+                                         tag="GBM-ESB"
+                                         transactionBuilder="service.esb.transactionBuilder"
+                                         platformMessageListenerAddress="127.0.0.1"
+                                         platformMessageListenerPort="28888"/>
+
+    <!-- 向ESB发送请求的Connector -->
+    <!-- TODO:注意调整properties文件中的属性值 -->
+    <service:nio-tcp-connector key="ESB"
+                               name="esb-tcp-connector"
+                               address="$SVC{service.connector.esb.host}"
+                               port="$SVC{service.connector.esb.port}"
+                               channelInitializer="service.gbm.connector.initializer.esb"/>
+
+    <!-- 接收ESB请求的Listener -->
+    <bean id="service.esb.listener.initializer.esb"
+          class="com.dlyd.application.lib.esb.listener.ESBListenerChannelInitializer">
+        <property name="messageFactory" ref="service.esb.messageFactory"/>
+    </bean>
+
+    <!-- TODO:注意调整properties文件中的属性值 -->
+    <service:nio-socket-listener
+            channelInitializer="service.esb.listener.initializer.esb"
+            id="ESB_LISTENER"
+            name="ESB_LISTENER"
+            address="$SVC{service.listener.esb.address}"
+            port="$SVC{service.listener.esb.port}"/>
+
+    <!-- ftp -->
+    <service:proxied-ftp-connector key="FTP" name="FTP" address="127.0.0.1" port="13982"/>
+    <!-- 心跳 -->
+    <core:hds-fixed listening-address="$SVC{service.coreheart.ip}" listening-port="$SVC{service.coreheart.port}"
+                    token="HeartBeat" reply="0000"/>
+
+    <bean id="key.public" class="com.dlyd.application.lib.cryptography.PEMStringPublicKeyProvider">
+        <property name="pem" value="$SVC{service.gbm.key.public.pem}"/>
+    </bean>
+
+    <bean id="key.private" class="com.dlyd.application.lib.cryptography.MockedPrivateKeyProvider">
+    </bean>
+
+    <!-- RSA加密/解密 -->
+    <bean id="rsaEncryption.client" class="com.dlyd.application.lib.cryptography.RSAEncryptionFactory">
+        <property name="publicKey" ref="key.public"/>
+        <property name="privateKey" ref="key.private"/>
+    </bean>
+
+    <bean id="service.gbm.transactionReportingService"
+          class="com.dlyd.application.gbm.service.TransactionReportingServiceImpl">
+        <property name="bankId" value="$SVC{service.gbm.bankId}"/>
+        <property name="rsaEncryption" ref="rsaEncryption.client"/>
+    </bean>
+
+    <bean id="service.gbm.messageFactory" class="com.dlyd.application.lib.webservice.WsSoapHttpMessageFactory">
+    </bean>
+
+    <service:nio-http-connector key="WS"
+                                name="ktkj-http-connector"
+                                address="$SVC{service.gbm.connector.ws.host}"
+                                port="$SVC{service.gbm.connector.ws.port}"
+                                connectTimeout="$SVC{service.gbm.connector.ws.connectTimeout}"
+                                writeTimeout="$SVC{service.gbm.connector.ws.writeTimeout}"
+                                readTimeout="$SVC{service.gbm.connector.ws.readTimeout}"
+                                messageFactory="service.gbm.messageFactory"/>
+
+</beans>
