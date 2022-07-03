@@ -9,4 +9,6 @@ import java.util.List;
 public interface UserMapper {
     //查询所有user方法
     public List<User> queryUserList();
+
+    public void insertUser();
 }

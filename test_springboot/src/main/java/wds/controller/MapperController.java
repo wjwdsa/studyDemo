@@ -20,4 +20,10 @@ public class MapperController {
         List<User> users = userMapper.queryUserList();
         return users;
     }
+
+    @RequestMapping("/insert")
+    @ResponseBody
+    public void insertUser() {
+        userMapper.insertUser();
+    }
 }

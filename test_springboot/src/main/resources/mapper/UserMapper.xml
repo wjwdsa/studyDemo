@@ -6,4 +6,7 @@
     <select id="queryUserList" resultType="user">
         select * from user
     </select>
+    <insert id="insertUser">
+        insert into user('3','wds','111','王东升')
+    </insert>
 </mapper>
