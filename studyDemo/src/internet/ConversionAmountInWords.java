@@ -42,7 +42,6 @@ public class ConversionAmountInWords {
      */
     private static String getInt(String str) {
         str = addUnit(str, "before");
-        System.out.println("sssss    " + str);
         //替换字符串多余的字符
         while (str.contains("零拾")) {
             str = str.replace("零拾", "零");
@@ -65,7 +64,6 @@ public class ConversionAmountInWords {
         while (str.contains("零零")) {
             str = str.replace("零零", "零");
         }
-        System.out.println(str);
         return removeEndOfZero(str);
     }
 
