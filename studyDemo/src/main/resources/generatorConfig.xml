@@ -28,7 +28,7 @@
         </javaModelGenerator>
         <!-- 生成映射文件的包名和位置-->
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
-            <property name="enableSubPackages" value="false"/>
+            <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
         <!-- 生成DAO的包名和位置-->
         <javaClientGenerator type="XMLMAPPER" targetPackage="dao" targetProject="src/main/java">
