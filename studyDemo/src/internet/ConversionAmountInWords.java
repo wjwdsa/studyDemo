@@ -21,11 +21,12 @@ public class ConversionAmountInWords {
         DecimalFormat df = new DecimalFormat("#0.###");//此时strNum小数位最多3位
         String strNum = df.format(money);
         if (strNum.indexOf(".") > 0) {//判断是否有小数
-            String strMoneyInt = strNum.substring(0, strNum.indexOf("."));
+            String strMoneyInt = strNum.substring(0, strNum.indexOf("."));//截取小数点前面的数字
+            String strMoneyFloat = strNum.substring(strNum.indexOf(".") + 1);//截取小数点后面的数字
             if (strMoneyInt.length() > 12) {
                 System.out.println("数字太大了，转换不了");
             } else {
-                System.out.println(getInt(strNum) + "元" + getDouble(strNum));
+                System.out.println(getInt(strMoneyInt) + "元" + getDouble(strMoneyFloat));
             }
         } else {
             if (strNum.length() > 12) {
@@ -40,28 +41,31 @@ public class ConversionAmountInWords {
      * 整数部分
      */
     private static String getInt(String str) {
-        if (str.contains(".")) {
-            str = str.substring(0, str.indexOf("."));//截取小数点前面的数字
-        }
         str = addUnit(str, "before");
-
-        //替换字符串多于的字符
-        if (str.contains("零拾")) {
+        System.out.println("sssss    " + str);
+        //替换字符串多余的字符
+        while (str.contains("零拾")) {
             str = str.replace("零拾", "零");
-        } else if (str.contains("零佰")) {
-            str = str.replace("零拾", "零");
-        } else if (str.contains("零仟")) {
-            str = str.replace("零拾", "零");
-        } else if (str.contains("零万")) {
-            str = str.replace("零拾", "万");
-        } else if (str.contains("零亿")) {
-            str = str.replace("零拾", "亿");
-        } else if (str.contains("零零")) {
-            str = str.replace("零拾", "零");
-        } else if (str.contains("亿万")) {
-            str = str.replace("零拾", "亿");
         }
-
+        while (str.contains("零佰")) {
+            str = str.replace("零佰", "零");
+        }
+        while (str.contains("零仟")) {
+            str = str.replace("零仟", "零");
+        }
+        while (str.contains("零万")) {
+            str = str.replace("零万", "万");
+        }
+        while (str.contains("零亿")) {
+            str = str.replace("零亿", "亿");
+        }
+        while (str.contains("亿万")) {
+            str = str.replace("亿万", "亿");
+        }
+        while (str.contains("零零")) {
+            str = str.replace("零零", "零");
+        }
+        System.out.println(str);
         return removeEndOfZero(str);
     }
 
@@ -69,8 +73,6 @@ public class ConversionAmountInWords {
      * 小数部分
      */
     private static String getDouble(String str) {
-        str = str.substring(str.indexOf(".") + 1);//截取小数点后的数字
-
         //解决单位错位
         if (str.length() == 1) {
             str = str + "00";
@@ -79,16 +81,18 @@ public class ConversionAmountInWords {
         }
 
         str = addUnit(str, "behind");
-
         //替换字符串多于的字符
-        if (str.contains("零角")) {
-            str = str.replace("零角", "零");
-        } else if (str.contains("零分")) {
-            str = str.replace("零分", "零");
-        } else if (str.contains("零厘")) {
-            str = str.replace("零厘", "零");
-        } else if (str.contains("零零")) {
-            str = str.replace("零零", "零");
+        while (str.contains("零角")) {
+            str = str.replace("零角", "");
+        }
+        while (str.contains("零分")) {
+            str = str.replace("零分", "");
+        }
+        while (str.contains("零厘")) {
+            str = str.replace("零厘", "");
+        }
+        while (str.contains("零零")) {
+            str = str.replace("零零", "");
         }
 
         return removeEndOfZero(str);

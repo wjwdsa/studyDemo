@@ -52,8 +52,7 @@ public class ConvertToFinancialCounting {
      * 第三种方法，通过NumberFormat方法
      */
     private static String numberFormatMethod(String cash) {
-        NumberFormat nt = NumberFormat.getInstance();
-        return nt.format(Long.parseLong(cash));
+        return NumberFormat.getInstance().format(Long.parseLong(cash));
     }
 
     /**
