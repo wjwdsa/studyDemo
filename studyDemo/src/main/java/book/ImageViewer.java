@@ -1,4 +1,4 @@
-package main.java.book;
+package book;
 
 import javax.swing.*;
 import java.awt.*;
