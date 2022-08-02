@@ -62,7 +62,7 @@ public class ConversionAmountInWords {
             str = str.replace("亿万", "亿");
         }
         while (str.contains("零零")) {
-            str = str.replace("零零", "零");
+            str = str.replace("零零", "");
         }
         return removeEndOfZero(str);
     }
