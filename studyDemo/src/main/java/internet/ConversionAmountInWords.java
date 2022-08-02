@@ -1,4 +1,4 @@
-package internet;
+package main.java.internet;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package douYin;
+package main.java.douYin;
 
 import java.text.NumberFormat;
 import java.util.Scanner;
