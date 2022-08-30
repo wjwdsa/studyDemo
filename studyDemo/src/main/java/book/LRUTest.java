@@ -17,7 +17,7 @@ public class LRUTest<K, V> extends LinkedHashMap<K, V> {
         this.cacheSize = cacheSize;
     }
 
-    //重写此方法，使其LinkedHashMap的大小在大于设置的缓存大小时，删除最年长的元素
+    //重写removeEldestEntry()方法，使LinkedHashMap的大小在大于设置的缓存大小时，删除最年长的元素
     @Override
     protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
         return size() >= cacheSize;
