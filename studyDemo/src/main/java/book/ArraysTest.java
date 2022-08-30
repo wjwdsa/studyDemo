@@ -18,7 +18,6 @@ public class ArraysTest {
 //        nums1 = IntStream.concat(IntStream.of(nums1), IntStream.of(nums2)).toArray();
 //        System.out.println("nums1 = " + Arrays.toString(nums1));
         System.arraycopy(nums2, 0, nums1, m, n);
-        System.out.println("nums1 = " + Arrays.toString(nums1));
         Arrays.sort(nums1);
         System.out.println("nums1 = " + Arrays.toString(nums1));
     }
