@@ -1,4 +1,4 @@
-package book;
+package wds.test;
 
 /******************************
  * @Description 尽可能高效、安全的单例模式

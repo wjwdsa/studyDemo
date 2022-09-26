@@ -6,9 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="studyDemo" />
-        <module name="studyDemo2" />
+        <module name="internet" />
+        <module name="book" />
+        <module name="douyin" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="book" options="-parameters" />
+      <module name="douyin" options="-parameters" />
+      <module name="internet" options="-parameters" />
+    </option>
   </component>
 </project>

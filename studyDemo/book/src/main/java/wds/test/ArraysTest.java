@@ -1,4 +1,4 @@
-package book;
+package wds.test;
 
 import java.util.Arrays;
 

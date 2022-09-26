@@ -1,4 +1,4 @@
-package book;
+package wds.test;
 
 /******************************
  * 用途说明: @Description 位运算
