@@ -1,7 +1,8 @@
 package wds.test;
 
+import org.junit.Test;
+
 import java.text.DecimalFormat;
-import java.util.Scanner;
 
 /******************************
  * 用途说明: @Description 转换金额为大写金额
@@ -13,10 +14,13 @@ public class ConversionAmountInWords {
     private static String[] numFloat = {"厘", "分", "角"};// 小数单位
     private static String[] numInt = {"", "拾", "佰", "仟", "万", "拾", "佰", "仟", "亿", "拾", "佰", "仟"};// 整数单位
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("请输入金额：");
-        double money = input.nextDouble();
+    @Test
+    public void test() {
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("请输入金额：");
+//        double money = input.nextDouble();
+        double money = Math.round(Math.random() * 10000000.00);
+        System.out.println("随机数字为：" + money);
         //格式化double数字
         DecimalFormat df = new DecimalFormat("#0.###");//此时strNum小数位最多3位
         String strNum = df.format(money);
